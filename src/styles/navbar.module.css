@@ -1,0 +1,19 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #131921;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  color: orange;
+}
