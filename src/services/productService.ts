@@ -1,19 +1,35 @@
 export async function getProducts() {
-  const res = await fetch("https://fakestoreapi.com/products")
+  try {
+    const res = await fetch("https://fakestoreapi.com/products", {
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch products")
+    if (!res.ok) throw new Error("Failed to fetch");
+
+     const data = await res.json();
+
+    return data // IMPORTANT
+  
+  } catch (error) {
+    console.error(error);
+    return [];
   }
-
-  return res.json()
 }
 
+
 export async function getProductById(id: string) {
-  const res = await fetch(`https://fakestoreapi.com/products/${id}`)
+  try{
+  const res = await fetch(`https://fakestoreapi.com/products/${id}`,{
+   cache: "no-store",
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch product")
+    if (!res.ok) throw new Error("Failed to fetch");
+
+     const data = await res.json();
+
+    return data
+  } catch (error) {
+    console.error(error);
+    return [];
   }
-
-  return res.json()
 }
