@@ -1,3 +1,5 @@
+"use client"
+
 import { getProducts } from "../../services/productService"
 import ProductCard from "../../components/ProductCard"
 export const dynamic = "force-dynamic";

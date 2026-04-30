@@ -1,5 +1,5 @@
-"use client"
 
+"use client"
 import { useEffect, useState } from "react"
 import { getProductById } from "../../../services/productService"
 import { useCart } from "../../../context/CartContext"
